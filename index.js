@@ -28,7 +28,7 @@ app.use("/firm", firmRoutes);
 app.use("/product", productRoutes);
 
 app.use("/", (req, res) => {
-  res.send("<h1> Welcome to Our Website");
+  res.send("<h1> Welcome to Our First Website");
 });
 
 mongoose
