@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(bodyparser.json());
 
@@ -27,8 +27,8 @@ app.use("/firm", firmRoutes);
 
 app.use("/product", productRoutes);
 
-app.use("/home", (req, res) => {
-  res.send("<h1> Welcome to SUBY");
+app.use("/", (req, res) => {
+  res.send("<h1> Welcome to Our Website");
 });
 
 mongoose
